@@ -14,18 +14,18 @@ namespace Theme17Pr1
         public Magazine(int copies, string name, int price, string quality) : base(copies, name, price)
         {
             this.quality = quality;
-            
+
         }
-          public double Cost()
+        public new double Cost()
         {
             if (quality == "высокое")
             {
-                return  base.Cost() + (base.Cost() * 0.1);
+                return base.Cost() + (base.Cost() * 0.1);
 
             }
             else if (quality == "среднее")
             {
-                return  base.Cost();
+                return base.Cost();
             }
             else if (quality == "низкое")
             {
@@ -34,7 +34,7 @@ namespace Theme17Pr1
             else
             { return base.Cost(); }
         }
-        public void Output()
+        public new void Output()
         {
             base.Output();
 

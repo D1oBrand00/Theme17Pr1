@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,19 +28,22 @@ namespace Theme17Pr1
             //Employee p3 = new Employee(age,name,surname, company, job);
             //p3.Print();
 
-            Console.Write("Введите кол-во копийй ");
+            Console.Write("Введите кол-во копий ");
             int copies = int.Parse(Console.ReadLine());
             Console.Write("Введите название газеты ");
             string name = Console.ReadLine();
             Console.Write("Введите стоимость одной газеты ");
-            int price int.Parse(Console.ReadLine());
-            Magazine x = new Magazine(copies,name,price)
+            int price = int.Parse(Console.ReadLine());
+            Console.Write("Введите качество тиража(высокое/среднее/низкое) ");
+            string quality = Console.ReadLine();
+            Press n1 = new Press(copies,name,price);
+            n1.Output();
+            Magazine n2 = new Magazine(copies, name, price, quality);
+            n2.Output();
 
 
 
             Console.ReadKey();
-
-
 
 
         }

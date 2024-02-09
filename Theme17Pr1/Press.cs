@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,30 +6,34 @@ using System.Threading.Tasks;
 
 namespace Theme17Pr1
 {
-    class Press
+    class Person
     {
-        int copies;
+        int age;
         string name;
-        int price;
+        string surname;
 
-        public int Copies { get => copies; set => copies = value; }
+        public int Age { get => age; set => age = value; }
         public string Name { get => name; set => name = value; }
-        public int Price { get => price; set => price = value; }
-        public Press() { }
-        public Press(int copies,string name, int price)
+        public string Surname { get => surname; set => surname = value; }
+        public Person() { }
+        public Person(int age)
         {
-            this.copies = copies;
+            this.Age = age;
+        }
+        public Person(int age, string name) :
+            this(age)
+        {
             this.name = name;
-            this.price = price;
         }
-        public int Cost()
+        public Person(int age, string name, string surname) :
+            this(age, name)
         {
-            int cost = copies * price;
-            return cost;
+
+            this.surname = surname;
         }
-        public void Output()
+        public void Print()
         {
-            Console.WriteLine($"Кол-во копий - {copies}\nНазвание газеты - {name}\nСтоимость одной газеты - {price} р.");
+            Console.WriteLine($"Возраст - {age}\nИмя - {name}\nФамилия - {surname}");
         }
     }
 }

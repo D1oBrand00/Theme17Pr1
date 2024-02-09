@@ -6,34 +6,30 @@ using System.Threading.Tasks;
 
 namespace Theme17Pr1
 {
-    class Person
+    class Press
     {
-        int age;
+        int copies;
         string name;
-        string surname;
+        int price;
 
-        public int Age { get => age; set => age = value; }
+        public int Copies { get => copies; set => copies = value; }
         public string Name { get => name; set => name = value; }
-        public string Surname { get => surname; set => surname = value; }
-        public Person() { }
-        public Person(int age)
+        public int Price { get => price; set => price = value; }
+        public Press() { }
+        public Press(int copies, string name, int price)
         {
-            this.Age = age;
-        }
-        public Person(int age, string name) :
-            this(age)
-        {
+            this.copies = copies;
             this.name = name;
+            this.price = price;
         }
-        public Person(int age, string name, string surname) :
-            this(age, name)
+        public int Cost()
         {
-
-            this.surname = surname;
+            int cost = copies * price;
+            return cost;
         }
-        public void Print()
+        public void Output()
         {
-            Console.WriteLine($"Возраст - {age}\nИмя - {name}\nФамилия - {surname}");
+            Console.WriteLine($"Кол-во копий - {copies}\nНазвание газеты - {name}\nСтоимость одной газеты - {price} р.");
         }
     }
 }

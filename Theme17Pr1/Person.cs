@@ -64,7 +64,11 @@ namespace Theme17Pr1
         /// <summary>
         /// Метод вывода
         /// </summary>
-        public void Print()
+        //public void Print()
+        //{
+        //    Console.WriteLine($"Возраст - {age}\nИмя - {name}\nФамилия - {surname}");
+        //}
+        virtual public void Print()
         {
             Console.WriteLine($"Возраст - {age}\nИмя - {name}\nФамилия - {surname}");
         }

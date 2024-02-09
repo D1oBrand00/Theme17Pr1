@@ -19,7 +19,7 @@ namespace Theme17Pr1
             this.company = company;
             this.job = job;
         }
-        public void Print()
+        public new void Print()
         {
             base.Print();
             Console.WriteLine($"Компания - {company}\nРабота - {job}");

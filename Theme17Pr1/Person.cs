@@ -31,21 +31,39 @@ namespace Theme17Pr1
         /// Конструктор по умолчанию
         /// </summary>
         public Person() { }
+        /// <summary>
+        /// Конструктор с одним параметром
+        /// </summary>
+        /// <param name="age"></param>
         public Person(int age)
         {
             this.Age = age;
         }
+        /// <summary>
+        /// Конструктор с двумя параметрами
+        /// </summary>
+        /// <param name="age"></param>
+        /// <param name="name"></param>
         public Person(int age, string name) :
             this(age)
         {
             this.name = name;
         }
+        /// <summary>
+        /// Конструктор с тремя параметрами
+        /// </summary>
+        /// <param name="age"></param>
+        /// <param name="name"></param>
+        /// <param name="surname"></param>
         public Person(int age, string name, string surname) :
             this(age, name)
         {
 
             this.surname = surname;
         }
+        /// <summary>
+        /// Метод вывода
+        /// </summary>
         public void Print()
         {
             Console.WriteLine($"Возраст - {age}\nИмя - {name}\nФамилия - {surname}");
